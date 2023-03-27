@@ -1,22 +1,27 @@
-# Welcome to Sonic Pi
+# I Wonder
+jesse_yell = "C:/Users/leoA4/Downloads/onlymp3.to - Who's Your Hero (nichecore corecore)-wfiOHGeVlPw-256k-1654132124398.wav"
+sample jesse_yell, amp: 7
 
-
-live_loop :ye do
+live_loop :ye, delay: 6 do
+  W = 8
   1.times do
     ye_melody = "C:/Users/leoA4/Downloads/onlymp3.to - Kanye West - I Wonder (piano tutorial)-4K9LYEDGZvM-256k-1655364791472.wav"
-    sample ye_melody
+    sample ye_melody, amp:W
     sleep 7
+    W = W - 1
   end
   stop
 end
-
-beats = [1, 5, 2, 1, 5]
-sounds = [:e, :d, :c, :d, :c,]
-i = 0
-k = 0
-3.times do
-  play sounds[i]
-  sleep beats[k]
-  i=i+1
-  j=j+1
+use_synth :piano
+with_fx :reverb do
+  beats = [1, 5, 2, 1, 5]
+  sounds = [:e, :d, :c, :d, :c,]
+  i = 0
+  k = 0
+  3.times do
+    play sounds[i]
+    sleep beats[k]
+    i=i+1
+    j=j+1
+  end
 end
