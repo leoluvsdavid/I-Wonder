@@ -1,0 +1,22 @@
+# Welcome to Sonic Pi
+
+
+live_loop :ye do
+  1.times do
+    ye_melody = "C:/Users/leoA4/Downloads/onlymp3.to - Kanye West - I Wonder (piano tutorial)-4K9LYEDGZvM-256k-1655364791472.wav"
+    sample ye_melody
+    sleep 7
+  end
+  stop
+end
+
+beats = [1, 5, 2, 1, 5]
+sounds = [:e, :d, :c, :d, :c,]
+i = 0
+k = 0
+3.times do
+  play sounds[i]
+  sleep beats[k]
+  i=i+1
+  j=j+1
+end
